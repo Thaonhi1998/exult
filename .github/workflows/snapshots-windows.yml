@@ -284,7 +284,7 @@ jobs:
           known_hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
       - name: Download artifacts
         if: ${{ env.EXULT_REPO_ALIVE == 'true' }}
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: "snapshot files"
       - shell: bash
